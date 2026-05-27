@@ -9,7 +9,7 @@ import com.example.data.AppDatabase
 import com.example.data.HabitRepository
 import com.example.data.MonitoredApp
 import com.example.data.PreferenceHelper
-import com.example.data.api.GeminiService
+import com.example.data.api.GroqService
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
@@ -90,7 +90,7 @@ class HabitViewModel(
             val stats = _analyticsData.value ?: repository.calculateAnalytics()
             val topApps = stats.topTriggeredApps.map { it.key }
             
-            val feedback = GeminiService.generateCoachingSession(
+            val feedback = GroqService.generateCoachingSession(
                 totalTriggers = stats.totalTriggers,
                 avoidedTriggers = stats.avoidedTriggers,
                 savedTimeMinutes = stats.screenTimeSavedMinutes,

@@ -33,7 +33,7 @@ import androidx.compose.ui.unit.sp
 import com.example.data.AppDatabase
 import com.example.data.PreferenceHelper
 import com.example.data.TriggerLog
-import com.example.data.api.GeminiService
+import com.example.data.api.GroqService
 import com.example.ui.theme.MyApplicationTheme
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -154,7 +154,7 @@ fun InterruptionScreen(
     // Load AI Prompt
     LaunchedEffect(targetAppName, activeFocusMode) {
         promptLoading = true
-        reflectionPrompt = GeminiService.generateReflectionPrompt(targetAppName, activeFocusMode)
+        reflectionPrompt = GroqService.generateReflectionPrompt(targetAppName, activeFocusMode)
         promptLoading = false
     }
 
