@@ -1,0 +1,8 @@
+{
+  "name": "Remix: OneSec - Habit Breaker",
+  "description": "Break addictive digital habits with mindful, 1-second breathing pauses and AI coaching feedback.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

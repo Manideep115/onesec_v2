@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">OneSec</string>
+    <string name="accessibility_description">OneSec relies on this service to detect when checked apps are launched to introduce a mindful breathing pause so you can choose consciously.</string>
+</resources>
